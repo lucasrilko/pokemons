@@ -1,10 +1,36 @@
-<h2>Listagem</h2>
+<html>
 
 
-<div>
-    <ul>
-        <li *ngFor="let p of pokemons">
-            {{p.name}} - {{p.url}}
-        </li>
-    </ul>
-</div>
+<mat-card>
+
+    <div>
+        <h5>Pokémon Database(Pokedex)</h5>
+        <mat-form-field>
+            <mat-label>Select a Pokemon</mat-label>
+            <mat-select [value]="pokemonId" (selectionChange)="goToPokemonPage($event)">
+                <mat-option *ngFor="let pokemon of pokemons" value="{{pokemon.url}}">{{pokemon.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <p>You selected:{{detalhes | json}}</p>
+</mat-card>
+
+<router-outlet></router-outlet>
+
+</html>
+
+<!-- <html>
+<main class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon Logo">
+
+    <form action="" class="search">
+        <input type="search" class="search-input" placeholder="Search about a pokemon using name or pokedex number">
+        <button class="search-button">Search</button>
+    </form>
+
+    <section class="pokemon">
+    </section>
+    <span class="error">Not Found!</span>
+</main>
+
+</html> -->
