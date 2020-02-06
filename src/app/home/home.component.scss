@@ -1,0 +1,56 @@
+            .app-entry {
+                display: flex;
+                flex-direction: column;
+                .home-page {
+                    flex: 1;
+                }
+            }
+            
+            .mat-toolbar {
+                background-color: transparent;
+                flex: 1;
+                color: black;
+                .brand {
+                    margin: 0 30px;
+                    .pokemon-logo {
+                        max-width: auto;
+                        max-height: 45px;
+                    }
+                }
+                .mat-form-field {
+                    width: 100%;
+                    background-color: transparent;
+                }
+            }
+            
+            footer {
+                flex: 1;
+                padding: 30px;
+                text-align: center;
+                background-color: transparent;
+            }
+            
+            .mat-option-text {
+                color: black;
+                .mat-option-ripple.mat-ripple {
+                    background-color: transparent;
+                }
+            }
+            
+            // backgroun-color: transparent;
+            // .mat-select-value {
+            //     color: white;
+            //     background-color: transparent;
+            // }
+            // .mat-expansion-indicator {
+            //     color: black;
+            // }
+            // .mat-select-panel {
+            //     .mat-optgroup-label {
+            //         .mat-select-panel {
+            //             .mat-option {
+            //                 background-color: transparent;
+            //             }
+            //         }
+            //     }
+            // }

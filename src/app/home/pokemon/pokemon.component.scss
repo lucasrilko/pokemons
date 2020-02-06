@@ -1,0 +1,82 @@
+.pokedex-info {
+    display: flex;
+    .sidebar {
+        padding: 1em;
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        h1 {
+            margin-bottom: 0;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            margin: 20px auto;
+        }
+        .pokemon-list-data {
+            list-style-type: none;
+            text-indent: 0;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .content {
+        padding: 1em;
+        flex-grow: 8;
+        display: flex;
+    }
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%,
+    100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
+.mat-accordion {
+    width: 100%;
+}
+
+.mat-expansion-panel {
+    width: 100%;
+    background-color: transparent;
+    color: black;
+}
