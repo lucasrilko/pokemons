@@ -1,0 +1,23 @@
+<div *ngIf="!info" class="lds-facebook">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="pokedex-info" *ngIf="info">
+
+    <aside class="sidebar">
+        <img src="{{info.sprites.front_default}}" alt="{{info.name}}" />
+        <h1>Nome: {{info.name}}</h1>
+        <ul>
+            <li>Peso: {{info.weight/10}}kg</li>
+            <li>Altura: {{info.height/10}}m</li>
+            <li>Tipo:</li>
+        </ul>
+    </aside>
+    <article class="content">
+        <pre>
+      {{ info | json }}
+    </pre>
+    </article>
+</div>

@@ -1,0 +1,29 @@
+.home-page {
+    .main-content {
+        border: solid 3px red;
+        height: 100vh;
+    }
+}
+
+.pokemon-logo {
+    max-width: 150px;
+    max-height: 150px;
+    top: 5px;
+    left: 600px;
+    width: auto;
+    height: auto;
+    position: fixed;
+}
+
+// .mat-toolbar-row {
+//     .mat-toolbar-single-row {
+//         .mat-form-field {
+//             box-sizing: border-box;
+//             padding: 0 16px;
+//             width: 500%;
+//             flex-direction: row;
+//             align-items: center;
+//             white-space: nowrap;
+//         }
+//     }
+// }

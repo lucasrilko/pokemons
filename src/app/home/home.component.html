@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <span>Pokedex</span>
+    <mat-form-field class="home-search">
+        <mat-label>Select a Pokemon</mat-label>
+
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" class="pokemon-logo">
+        </div>
+        <mat-select [value]="pokemonId" (selectionChange)="goToPokemonPage($event)">
+            <mat-option *ngFor="let pokemon of pokemons" value="{{pokemon.name}}">{{pokemon.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-toolbar>
+<div class="home-page">
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+    <footer>
+        powered by <a href=" https://github.com/lucasrilko/">@lucasrilko </a> </footer>
+</div>

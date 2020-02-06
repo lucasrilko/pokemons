@@ -1,16 +1,16 @@
 import { Routes, RouterModule } from "@angular/router";
-import { PokemonsListagemComponent } from "./pokemons-listagem/pokemons-listagem.component";
-import { PokemonsDetalhesComponent } from "./pokemons-listagem/pokemons-detalhes/pokemons-detalhes.component";
 import { ModuleWithProviders } from "@angular/core";
+import { HomeComponent } from './home/home.component';
+import { PokemonComponent } from './home/pokemon/pokemon.component';
 
 const APP_ROUTES: Routes = [
   {
     path: "",
-    component: PokemonsListagemComponent,
+    component: HomeComponent,
     children: [
       {
-        path: "detalhes",
-        component: PokemonsDetalhesComponent
+        path: "pokemon/:id",
+        component: PokemonComponent
       }
     ]
   }
