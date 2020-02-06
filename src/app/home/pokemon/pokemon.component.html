@@ -9,15 +9,61 @@
     <aside class="sidebar">
         <img src="{{info.sprites.front_default}}" alt="{{info.name}}" />
         <h1>Nome: {{info.name}}</h1>
-        <ul>
-            <li>Peso: {{info.weight/10}}kg</li>
-            <li>Altura: {{info.height/10}}m</li>
-            <li>Tipo:</li>
+        <ul class="pokemon-list-data">
+            <li><strong>Peso:</strong> {{info.weight/10}}kg</li>
+            <li><strong>Altura:</strong> {{info.height/10}}m</li>
+            <li><strong>Tipo:</strong> <span *ngFor="let type of info.types">{{type.type.name}} </span></li>
         </ul>
     </aside>
     <article class="content">
-        <pre>
-      {{ info | json }}
-    </pre>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    Movimentos
+                </mat-expansion-panel-header>
+
+                <ul>
+                    <li *ngFor="let move of info.moves">
+                        <!-- {{ move | json }}  -->
+                        {{ move.move.name}}
+                    </li>
+                </ul>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    Habilidades
+                </mat-expansion-panel-header>
+                <ul>
+                    <li *ngFor="let ability of info.abilities">
+                        {{ability.ability.name}}
+                    </li>
+                </ul>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    Estatísticas
+                </mat-expansion-panel-header>
+                <ul>
+                    <li *ngFor="let stat of info.stats">
+                        {{stat.stat.name}}
+
+                    </li>
+                </ul>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    Item Secundário
+                </mat-expansion-panel-header>
+                <ul>
+                    <li *ngFor="let item of info.held_items">
+                        {{item.item.name}}
+                    </li>
+                </ul>
+            </mat-expansion-panel>
+
+        </mat-accordion>
     </article>
 </div>

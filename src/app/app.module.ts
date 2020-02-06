@@ -16,7 +16,7 @@ import { Routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { PokemonComponent } from './home/pokemon/pokemon.component';
 import { PokemonsService } from './services/pokemons.service';
-
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -35,8 +35,8 @@ import { PokemonsService } from './services/pokemons.service';
     MatSelectModule,
     Routing,
     MatCardModule,
-    NgbModule
-
+    NgbModule,
+    MatExpansionModule
   ],
   providers: [PokemonsService],
   bootstrap: [AppComponent]
